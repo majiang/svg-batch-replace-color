@@ -1,0 +1,8 @@
+<div class="preview-container">
+  <div
+    *ngFor="let file of files"
+    class="preview-element"
+  >
+    <img [src]="svgFile.url(file)" [alt]="file.name">
+  </div>
+</div>
