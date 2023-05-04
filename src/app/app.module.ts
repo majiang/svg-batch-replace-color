@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms'
 
+import { AngularSplitModule } from 'angular-split'
+
 import { AppComponent } from './app.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { FilePreviewComponent } from './file-preview/file-preview.component';
@@ -19,6 +21,7 @@ import { ReplaceColorComponent } from './replace-color/replace-color.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    AngularSplitModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
