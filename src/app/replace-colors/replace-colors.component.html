@@ -1,6 +1,8 @@
 <div class="color-container">
   <app-replace-color
-    *ngFor="let originalColor of originalColors"
-    [originalColor]="originalColor"
+    *ngFor="let originalAndReplace of replaceColors.replacement | keyvalue"
+    [originalColor]="originalAndReplace.key"
+    [replacedColor]="originalAndReplace.value"
+    (replacedColorChange)="onChange($event)"
   />
 </div>

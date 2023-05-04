@@ -1,4 +1,4 @@
 <div class="color-element">
   <span class="color-before" [style.color]="originalColor">●</span>
-  <input type="color">
+  <input type="color" [formControl]="colorPicker" (change)="onChange()">
 </div>
