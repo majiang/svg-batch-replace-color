@@ -1,6 +1,7 @@
+<button type="submit" (click)="initiateDownload()">Download&#x2913;</button>
 <div class="preview-container">
   <div
-    *ngFor="let file of files"
+    *ngFor="let file of replacedFiles"
     class="preview-element"
   >
     <img [src]="svgFile.url(file)" [alt]="file.name">

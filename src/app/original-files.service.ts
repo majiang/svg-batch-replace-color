@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +13,16 @@ export class OriginalFilesService {
       console.log(fileList[i].name)
       this._files.push(fileList[i])
     }
+    this._files.sort((a, b) =>
+      (a.name < b.name) ? -1 :
+      (a.name > b.name) ? +1 :
+      0)
     this.filesSubject.next(this._files)
   }
   get observableFiles()
   {
     return this.filesSubject.asObservable()
   }
-  private _files: File[] = []
-  private filesSubject: Subject<File[]> = new Subject<File[]>
+  _files: File[] = []
+  private filesSubject = new Subject<File[]>
 }
