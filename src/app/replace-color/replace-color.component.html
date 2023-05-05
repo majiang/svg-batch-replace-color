@@ -4,12 +4,12 @@
       <span [style.background-color]="'#000'">●</span>
       <span [style.background-color]="'#FFF'">●</span>
     </td>
-    <td>{{originalColor}}</td>
+    <td>{{ originalColor }}</td>
   </tr>
   <tr>
     <td>
-      <input type="color" [formControl]="colorPicker" (change)="onChange()">
+      <input type="color" [formControl]="colorPicker" (change)="onChange()" />
     </td>
-    <td>{{replacedColor}}</td>
+    <td>{{ replacedColor }}</td>
   </tr>
 </table>
