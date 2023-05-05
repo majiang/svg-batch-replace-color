@@ -5,10 +5,8 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ReplaceColorsService {
-  constructor() { }
   set original(originalColors: string[])
   {
-    console.log(`replaceColors.original=${originalColors}`)
     this._replacement = new Map(originalColors.map(
       originalColor => [originalColor,
         this._replacement.get(originalColor) ?? originalColor])

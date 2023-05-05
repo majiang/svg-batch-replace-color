@@ -16,7 +16,7 @@ export class ReplaceColorsComponent implements OnInit, OnDestroy {
   ngOnInit()
   {
     this.originalFilesSubscription = this.originalFiles.observableFiles.subscribe((files) => {
-      Promise.all(
+      void Promise.all(
       files.map(file => file.text().then(text =>
         (text.match(/#[0-9A-Fa-f]{6}/g) ?? [])
         ))).then((aa) => {

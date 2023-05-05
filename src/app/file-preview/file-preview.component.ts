@@ -24,7 +24,7 @@ export class FilePreviewComponent implements OnInit, OnDestroy {
   {
     let zip = new JSZip()
     this.replacedFiles.forEach(file => zip.file(file.name, file))
-    zip.generateAsync({type: "blob"}).then(blob =>
+    void zip.generateAsync({type: "blob"}).then(blob =>
       saveAs(blob, 'color-replaced.zip'))
   }
   replaceFiles()

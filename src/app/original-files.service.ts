@@ -5,7 +5,6 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class OriginalFilesService {
-  constructor() { }
   set files(fileList: FileList){
     this._files = []
     for (let i = 0; i < fileList.length; i++)
