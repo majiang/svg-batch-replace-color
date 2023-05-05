@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing'
 
-import { ReplaceColorsService } from './replace-colors.service';
+import {ReplaceColorsService} from './replace-colors.service'
 
 describe('ReplaceColorsService', () => {
-  let service: ReplaceColorsService;
+  let service: ReplaceColorsService
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ReplaceColorsService);
-  });
+    TestBed.configureTestingModule({})
+    service = TestBed.inject(ReplaceColorsService)
+  })
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+    expect(service).toBeTruthy()
+  })
+})
